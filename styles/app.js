@@ -9,6 +9,7 @@ const loadData = () => {
 const displayData = (data) => {
   const dataArray = data.docs;
   const div = document.getElementById("div");
+
   // take eatch array element
   dataArray.forEach((element) => {
     const rowElement = document.createElement("div");
@@ -19,17 +20,17 @@ const displayData = (data) => {
     const authors = element.author_name;
     const publishers = element.publisher;
     const firstPublish = element.first_publish_year;
-    rowElement.innerHTML = `<div class="">
-        <div>
-        <img src="${`https://covers.openlibrary.org/b/id/${cover_i}-M.jpg`}" alt="">
-         </div>
-         <div class="book-details">
-           <h2 class="text-primary">${titleName} </h2>
-           <h6 class="text-warning d-flex flex-wrap">Author: ${authors} </h6>
-           <span class="d-flex flex-nowrap">Publisher: ${publishers} </span>
-           <p class="text-dark">First Publish:${firstPublish}</p>
-         </div>
-       </div>`;
+    rowElement.innerHTML = `<div class="rounded-3 shadow p-3 mb-5 bg-body rounded gap-4 justify-items-center">
+          <div>
+          <img width="200px" height="200px" class="rounded-3  mx-auto"  src="${`https://covers.openlibrary.org/b/id/${cover_i}-M.jpg`}" alt="">
+           </div>
+           <div class="book-details">
+             <h4 class="text-primary p-2">${titleName} </h4>
+             <h6 class="text-warning d-flex flex-wrap p-2">Author: ${authors} </h6>
+             <span class="d-flex flex-nowrap text-secondary p-2">Publisher: ${publishers} </span>
+             <p class="text-info p-2">First Publish:${firstPublish}</p>
+           </div>
+         </div>`;
 
     div.appendChild(rowElement);
   });

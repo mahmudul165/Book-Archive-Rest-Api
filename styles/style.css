@@ -8,7 +8,14 @@ body {
 .color-design {
   background-color: goldenrod;
 }
-/* .mystyle {
+.div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-} */
+}
+.mystyle {
+  background-color: honeydew;
+  margin: 5px, 0px;
+  box-shadow: hotpink;
+  padding: 5px;
+  margin: 5 px;
+}
