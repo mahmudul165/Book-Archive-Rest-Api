@@ -29,7 +29,14 @@ const loadData = () => {
 // display position
 const displayData = (data) => {
   document.getElementById("div").textContent = "";
+  document.getElementById("result").textContent = "";
   const dataArray = data.docs;
+  //  book search found
+  // length of array where eatch element are there
+  //console.log(dataArray.length);
+  document.getElementById("result").innerHTML = `
+  <p>Total result Found: <span class='text-warning'> ${data.numFound} </span></p>
+  <p>Search result show: <span class='text-warning'>${dataArray.length}</span></p>`;
   const div = document.getElementById("div");
   // take eatch array element
   // const count = 0;
